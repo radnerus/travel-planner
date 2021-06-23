@@ -59,7 +59,7 @@ export class TravelPlanner {
      */
     showTravelPlan() {
         let resultString = this.citiesTravelled.reduce((_formattedString, _city) => {
-            return _formattedString + `${_city.id} (${_city.name}, ${_city.contId}) ➡️ `;
+            return _formattedString + `  ${_city.id} (${_city.name}, ${_city.contId}) ➡️ `;
         }, '');
 
         console.log(
@@ -69,7 +69,7 @@ export class TravelPlanner {
         );
 
         console.log(chalk.bold(resultString.slice(0, resultString.length - 3)));
-        console.log(chalk.italic.bold.bgRed.blackBright.white(`\n\tTotal Distance of ${this.isMin ? 'minimum' : 'maximum'} distanced cities in different continnets : ${this.totalDistance.toFixed(2)} KM\t\n`));
+        console.log(chalk.italic.bold.bgRed.blackBright.white(`\n\tTotal Distance of ${this.isMin ? 'minimum' : 'maximum'} distanced cities in different continents : ${this.totalDistance.toFixed(2)} KM\t\n`));
     }
 
     /**
